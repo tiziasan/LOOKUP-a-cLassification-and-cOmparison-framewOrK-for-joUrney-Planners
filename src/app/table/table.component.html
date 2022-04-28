@@ -1,0 +1,190 @@
+<table [dataSource]="dataSource" class="mat-elevation-z8" mat-table>
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="Micro aspects">
+    <th *matHeaderCellDef mat-header-cell> Micro Aspects</th>
+    <td *matCellDef="let element"
+        [ngClass]="{clsWeight: element.micro == 'Multi Platform' || element.micro== 'Transportation Mode' || element.micro== 'Green Transportation Mode' || element.micro== 'Eco Features' || element.micro== 'Backend Features' || element.micro== 'Self adaptive plans features' || element.micro== 'Health features' || element.micro== 'Monitoring features' || element.micro== 'Input features' || element.micro== 'Travel features' || element.micro== 'Optional features' || element.micro== 'Public transportation' || element.micro== 'Setting features' || element.micro== 'Hot spots	' || element.micro== 'Coverage' || element.micro== 'Trip coverage' || element.micro== 'Total Score'}"
+        mat-cell> {{element.micro}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="Citymappers">
+    <th *matHeaderCellDef mat-header-cell> Citymappers</th>
+    <td *matCellDef="let element" mat-cell> {{element.planner1}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="Moovit">
+    <th *matHeaderCellDef mat-header-cell> Moovit</th>
+    <td *matCellDef="let element" mat-cell> {{element.planner2}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="TripGo">
+    <th *matHeaderCellDef mat-header-cell> TripGo</th>
+    <td *matCellDef="let element" mat-cell> {{element.planner3}} </td>
+  </ng-container>
+  <ng-container matColumnDef="Waze">
+    <th *matHeaderCellDef mat-header-cell> Waze</th>
+    <td *matCellDef="let element" mat-cell> {{element.planner4}} </td>
+  </ng-container>
+  <ng-container matColumnDef="Google Maps">
+    <th *matHeaderCellDef mat-header-cell> Google Maps</th>
+    <td *matCellDef="let element" mat-cell> {{element.planner5}} </td>
+  </ng-container>
+  <ng-container matColumnDef="GT Planner">
+    <th *matHeaderCellDef mat-header-cell> GT Planner</th>
+    <td *matCellDef="let element" mat-cell> {{element.planner6}} </td>
+  </ng-container>
+  <ng-container matColumnDef="OpenMove">
+    <th *matHeaderCellDef mat-header-cell> OpenMove</th>
+    <td *matCellDef="let element" mat-cell> {{element.planner7}} </td>
+  </ng-container>
+  <ng-container matColumnDef="TomTom">
+    <th *matHeaderCellDef mat-header-cell> TomTom</th>
+    <td *matCellDef="let element" mat-cell> {{element.planner8}} </td>
+  </ng-container>
+  <ng-container matColumnDef="Mentz">
+    <th *matHeaderCellDef mat-header-cell> Mentz</th>
+    <td *matCellDef="let element" mat-cell> {{element.planner9}} </td>
+  </ng-container>
+  <ng-container matColumnDef="Green Paths">
+    <th *matHeaderCellDef mat-header-cell> Green Paths</th>
+    <td *matCellDef="let element" mat-cell> {{element.planner10}} </td>
+  </ng-container>
+
+  <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+  <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
+</table>
+
+
+<!-- Copyright 2022 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at https://angular.io/license -->
+
+<h1>Scores</h1>
+<table [dataSource]="dataScores" class="mat-elevation-z8" mat-table>
+
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="Citymappers">
+    <th *matHeaderCellDef mat-header-cell> Citymappers</th>
+    <td *matCellDef="let element" mat-cell> {{element.planner1 / 2}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="Moovit">
+    <th *matHeaderCellDef mat-header-cell> Moovit</th>
+    <td *matCellDef="let element" mat-cell> {{element.planner2 / 2}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="TripGo">
+    <th *matHeaderCellDef mat-header-cell> TripGo</th>
+    <td *matCellDef="let element" mat-cell> {{element.planner3 / 2}} </td>
+  </ng-container>
+  <ng-container matColumnDef="Waze">
+    <th *matHeaderCellDef mat-header-cell> Waze</th>
+    <td *matCellDef="let element" mat-cell> {{element.planner4 / 2}} </td>
+  </ng-container>
+  <ng-container matColumnDef="Google Maps">
+    <th *matHeaderCellDef mat-header-cell> Google Maps</th>
+    <td *matCellDef="let element" mat-cell> {{element.planner5 / 2}} </td>
+  </ng-container>
+  <ng-container matColumnDef="GT Planner">
+    <th *matHeaderCellDef mat-header-cell> GT Planner</th>
+    <td *matCellDef="let element" mat-cell> {{element.planner6 / 2}} </td>
+  </ng-container>
+  <ng-container matColumnDef="OpenMove">
+    <th *matHeaderCellDef mat-header-cell> OpenMove</th>
+    <td *matCellDef="let element" mat-cell> {{element.planner7 / 2}} </td>
+  </ng-container>
+  <ng-container matColumnDef="TomTom">
+    <th *matHeaderCellDef mat-header-cell> TomTom</th>
+    <td *matCellDef="let element" mat-cell> {{element.planner8 / 2}} </td>
+  </ng-container>
+  <ng-container matColumnDef="Mentz">
+    <th *matHeaderCellDef mat-header-cell> Mentz</th>
+    <td *matCellDef="let element" mat-cell> {{element.planner9 / 2}} </td>
+  </ng-container>
+  <ng-container matColumnDef="Green Paths">
+    <th *matHeaderCellDef mat-header-cell> Green Paths</th>
+    <td *matCellDef="let element" mat-cell> {{element.planner10 / 2}} </td>
+  </ng-container>
+
+  <tr *matHeaderRowDef="displayedColumns1" mat-header-row></tr>
+  <tr *matRowDef="let row; columns: displayedColumns1;" mat-row></tr>
+</table>
+<!--<google-chart-->
+<!--  [type]="chartData.type"-->
+<!--  [data]="chartData.data"-->
+<!--  [columns]="chartData.rowNames"-->
+<!--  [options]="chartData.options"-->
+<!--  [width]="chartData.width"-->
+<!--  [height]="chartData.height">-->
+
+<!--</google-chart>-->
+
+<ngx-charts-bar-vertical
+  [gradient]="false"
+  [legendTitle]="'Planners'"
+  [legend]="true"
+  [results]="saleData"
+  [showXAxisLabel]="true"
+  [showYAxisLabel]="true"
+  [view]="[1000,400]"
+  [xAxisLabel]="'Planners'"
+  [xAxis]="true"
+  [yAxisLabel]="'Scores'"
+  [yAxis]="true">
+</ngx-charts-bar-vertical>
+<br>
+<br>
+
+<form class="test">
+  <h4>Select Macro</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Select Macro</mat-label>
+    <mat-select [(ngModel)]="selectedMacro" name="macro">
+      <mat-option *ngFor="let macro of selectMacro" [value]="macro.value">
+        {{macro.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <h4>Select multiplicator</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Select multiplicator</mat-label>
+    <select [(ngModel)]="selectedScore" matNativeControl name="score">
+      <option selected value=""></option>
+      <option *ngFor="let score of selectScore" [value]="score.value">
+        {{score.viewValue}}
+      </option>
+    </select>
+  </mat-form-field>
+  <button (click)="generateChart(selectedMacro,selectedScore)" class="pure-material-button-contained">Generate chart
+  </button>
+</form>
+
+<ngx-charts-bar-vertical *ngIf="show"
+                         [customColors]="barChartcustomColors"
+                         [gradient]="false"
+
+                         [legendTitle]="'Planners'"
+                         [legend]="true"
+                         [results]="saleDataNew"
+                         [showXAxisLabel]="true"
+                         [showYAxisLabel]="true"
+                         [view]="[1000,400]"
+                         [xAxisLabel]="'Planners'"
+                         [xAxis]="true"
+                         [yAxisLabel]="'Scores'"
+                         [yAxis]="true">
+</ngx-charts-bar-vertical>
+<div *ngIf="!show" class="fake">
+
+</div>
+
