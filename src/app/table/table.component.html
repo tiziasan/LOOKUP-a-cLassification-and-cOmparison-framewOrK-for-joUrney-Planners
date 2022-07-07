@@ -8,13 +8,13 @@
     <th *matHeaderCellDef mat-header-cell> Micro Aspects</th>
     <td *matCellDef="let element"
         [ngClass]="{clsWeight: element.micro == 'Multi Platform' || element.micro== 'Transportation Mode' || element.micro== 'Green Transportation Mode' || element.micro== 'Eco Features' || element.micro== 'Backend Features' || element.micro== 'Self adaptive plans features' || element.micro== 'Health features' || element.micro== 'Monitoring features' || element.micro== 'Input features' || element.micro== 'Travel features' || element.micro== 'Optional features' || element.micro== 'Public transportation' || element.micro== 'Setting features' || element.micro== 'Hot spots	' || element.micro== 'Coverage' || element.micro== 'Trip coverage' || element.micro== 'Total Score'}"
-        mat-cell> {{element.micro}} </td>
+        mat-cell matTooltip="Info about the micro aspect"> {{element.micro}} </td>
   </ng-container>
 
   <!-- Name Column -->
   <ng-container matColumnDef="Citymappers">
     <th *matHeaderCellDef mat-header-cell> Citymappers</th>
-    <td *matCellDef="let element" mat-cell> {{element.planner1}} </td>
+    <td *matCellDef="let element" mat-cell > {{element.planner1}} </td>
   </ng-container>
 
   <!-- Weight Column -->

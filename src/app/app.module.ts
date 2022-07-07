@@ -17,6 +17,7 @@ import { MatTableModule} from "@angular/material/table";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatSelectModule} from "@angular/material/select";
 import { MatInputModule } from '@angular/material/input';
+import {MatTooltipModule} from "@angular/material/tooltip";
 
 
 
@@ -25,22 +26,23 @@ import { MatInputModule } from '@angular/material/input';
     AppComponent,
     TableComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatSliderModule,
-    MatTableModule,
-    MatNativeDateModule,
-    GoogleChartsModule,
-    NgxChartsModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    MatInputModule
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatSliderModule,
+        MatTableModule,
+        MatNativeDateModule,
+        GoogleChartsModule,
+        NgxChartsModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
+        MatSelectModule,
+        MatInputModule,
+        MatTooltipModule
 
-  ],
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
