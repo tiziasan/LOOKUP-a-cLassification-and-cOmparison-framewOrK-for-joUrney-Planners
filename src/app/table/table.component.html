@@ -1,3 +1,5 @@
+<div class="container">
+
 <table [dataSource]="dataSource" class="mat-elevation-z8" mat-table>
 
   <!--- Note that these columns can be defined in any order.
@@ -166,6 +168,7 @@
       </option>
     </select>
   </mat-form-field>
+
   <button (click)="generateChart(selectedMacro,selectedScore)" class="pure-material-button-contained">Generate chart
   </button>
 </form>
@@ -185,7 +188,12 @@
                          [yAxisLabel]="'Scores'"
                          [yAxis]="true">
 </ngx-charts-bar-vertical>
-<div *ngIf="!show" class="fake">
+  <button (click)="getPDF()" class="btn btn-primary">Download PDF</button>
+
+  <div *ngIf="!show" class="fake">
+
+
 
 </div>
 
+</div>

@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import jsPDF from "jspdf";
+import html2canvas from "html2canvas";
 
 
 export interface PlannersElement {
@@ -304,6 +306,42 @@ export class TableComponent {
   saleData: any;
 
   show = false;
+  public getPDF(){
+    const time = setTimeout(() => {this.show = true; clearTimeout(time)}, 100);
+
+
+    let HTML_Width =10000;
+    let HTML_Height = 60000;
+    let top_left_margin = 15;
+    let PDF_Width = HTML_Width+(top_left_margin*2);
+    let PDF_Height = (PDF_Width*1.5)+(top_left_margin*2);
+    let canvas_image_width = HTML_Width;
+    let canvas_image_height = HTML_Height;
+
+    let totalPDFPages = Math.ceil(HTML_Height/PDF_Height)-1;
+
+
+    html2canvas(document.body).then(canvas => {
+      canvas.getContext('2d');
+
+      console.log(canvas.height+"  "+canvas.width);
+
+
+      let imgData = canvas.toDataURL("image/jpeg", 1.0);
+      let pdf = new jsPDF('p', 'pt',  [PDF_Width, PDF_Height]);
+      pdf.addImage(imgData, 'JPG', top_left_margin, top_left_margin,canvas_image_width,canvas_image_height);
+
+
+      for (let i = 1; i <= totalPDFPages; i++) {
+        pdf.addPage();
+        pdf.addImage(imgData, 'JPG', top_left_margin, -(PDF_Height*i)+(top_left_margin*4),canvas_image_width,canvas_image_height);
+      }
+
+      pdf.save("HTML-Document.pdf");
+    });
+  };
+
+
   generateChart(selectedMacro: number[], selectedScore: number) {
     this.show = false;
     this.scores2[0]['planner1'] = 0;
