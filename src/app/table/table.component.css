@@ -9,6 +9,16 @@ table{
   margin-top: 100px;
 
 }
+
+.navbar {
+  overflow: hidden;
+  position: fixed; /* Set the navbar to fixed position */
+  margin-top: 20px;
+}
+.navbartable {
+  margin-top: 80px;
+}
+
 .pure-material-button-contained {
   position: relative;
   display: inline-block;
