@@ -1,5 +1,13 @@
 <div class="container">
 
+<p>This is a framework for classification and comparison of multimodal planners presented on iCities 2022. For further details, follow the link:</p>
+<a href="https://drive.google.com/file/d/1drV4zUhUsZsalcThEOlnwhXVF1IIoqhw/view?usp=sharing">Access to the paper</a>
+
+<br>
+
+<button class="pure-material-button-contained" disabled>Add new planner
+</button>
+
 <table [dataSource]="dataSource" class="mat-elevation-z8" tabindex="0" mat-table>
 
   <!--- Note that these columns can be defined in any order.
@@ -149,9 +157,9 @@
 <br>
 
 <form class="test">
-  <h4>Select Macro</h4>
+  <h4>Select category</h4>
   <mat-form-field appearance="fill">
-    <mat-label>Select Macro</mat-label>
+    <mat-label>Select category</mat-label>
     <mat-select [(ngModel)]="selectedMacro" name="macro">
       <mat-option *ngFor="let macro of selectMacro" [value]="macro.value">
         {{macro.viewValue}}
