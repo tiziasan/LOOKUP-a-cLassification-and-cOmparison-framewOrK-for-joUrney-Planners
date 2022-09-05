@@ -15,7 +15,7 @@
 
   <!-- Position Column -->
   <ng-container matColumnDef="Micro aspects">
-    <th *matHeaderCellDef mat-header-cell > Micro Aspects</th>
+    <th *matHeaderCellDef mat-header-cell > Categories and Features</th>
     <td *matCellDef="let element"
         [ngClass]="{clsWeight: element.micro == 'Front End Platform' || element.micro== 'Transportation Mode' || element.micro== 'Green Transportation Mode' || element.micro== 'Eco Features'  || element.micro== 'Self adaptive plans features' || element.micro== 'Health features' || element.micro== 'Monitoring features' || element.micro== 'Input features' || element.micro== 'Travel features' || element.micro== 'Additional features' || element.micro== 'Ticket transportation' || element.micro== 'Setting features' || element.micro== 'Hot spots	' || element.micro== 'Planner Coverage' || element.micro== 'Trip coverage' || element.micro== 'Total Score' || element.micro== 'Practitioner Relevant Features'}"
         mat-cell matTooltip={{element.desc}} > {{element.micro}} </td>
