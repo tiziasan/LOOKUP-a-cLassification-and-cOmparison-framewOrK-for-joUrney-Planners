@@ -1,12 +1,20 @@
+<style>
+  .right {
+    float: right;
+    width: 300px;
+    padding: 0px;
+    margin-right: 18%;
+  }
+  </style>
+
 <div class="container">
 
-<p>This is a framework for classification and comparison of multimodal planners presented on iCities 2022. For further details, follow the link:</p>
-<a href="https://drive.google.com/file/d/1drV4zUhUsZsalcThEOlnwhXVF1IIoqhw/view?usp=sharing">Access to the paper</a>
+<h4>This is a framework for classification and comparison of multimodal planners. For further details about the features and score assingment, click <a href="https://drive.google.com/file/d/1drV4zUhUsZsalcThEOlnwhXVF1IIoqhw/view?usp=sharing">here</a>.</h4>
 
-<br>
-
-<button class="pure-material-button-contained" disabled>Add new planner
-</button>
+<div class="right">
+  <button class="pure-material-button-contained" disabled>Add new planner
+  </button>
+</div>
 
 <table [dataSource]="dataSource" class="mat-elevation-z8" tabindex="0" mat-table>
 
