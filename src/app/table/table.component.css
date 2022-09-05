@@ -10,6 +10,12 @@ table{
 
 }
 
+.right {
+  width: 300px;
+  float: right;
+  margin-right: 0px;
+}
+
 .navbar {
   overflow: hidden;
   position: fixed; /* Set the navbar to fixed position */
